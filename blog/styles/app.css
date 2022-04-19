@@ -1,0 +1,131 @@
+body {
+  --main-page-color: #19181A;
+  --article-heading-color: #DF9A10;
+  --subtext-color: #B19F9E;
+  --article-main-text-color: #B19F9E;
+  --logo-color: #DF9A10;
+  --nav-list-color: #B19F9E;
+
+  font-family: 'Playfair Display', serif;
+  max-width: 70%;
+  margin: auto;
+
+ background-color: var(--main-page-color, #19181A);
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--article-main-text-color, #A16E83)
+}
+
+h2 {
+ font-size: 2rem;
+ color: var(--article-heading-color, #B19F9E);
+ text-align: center;
+ line-height: 1px;
+}
+h3{
+  font-size: 1rem;
+  color: var(--subtext-color, #7F7F7F);
+  text-align: center;
+}
+
+header{
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+margin-bottom: 1.5vw;
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--logo-color, #DF9A10);
+}
+
+.latest-article{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 40vw;
+}
+
+.latest-article h1{
+  color: var(--article-heading-color, #B19F9E);
+  font-size: 3rem;
+
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2vw;
+  width: 10vw;
+  margin-right: 2vw;
+}
+
+.nav-list {
+  
+  padding-top: 1vw;
+  padding-left: 0.5vw;
+  
+}
+
+.nav-list a{
+  text-decoration: none;
+  /* color: var(--nav-list-color, #B19F9E); */
+  color: var(--logo-color, #DF9A10);
+}
+.nav-list a:hover {
+  color: var(--nav-list-color, #B19F9E);
+ 
+}
+.continue{
+  text-align: right;
+  padding-bottom: 8vw;
+}
+.continue a{
+  color: var(--article-heading-color, #B19F9E);
+  text-decoration: none;
+}
+
+.continue a:hover{
+  color: var(--article-heading-color, #B19F9E);
+  text-decoration: underline;
+}
+
+.latest-article img{
+  width: 38vw;
+  height: 12vw;
+  
+}
+
+.text-content{
+  padding: 0vw 4vw 0vw 2vw;
+}
+
+.text-content h1{
+  font-size: 3vw;
+  text-align: center;
+  line-height: 1px;
+}
+
+
+.other-articles{
+  width: 20vw;
+  margin-left: 8vw;
+}
+
+.other-articles img{
+  width: 20vw;
+  height: 10vw;
+ 
+}
+
+
+

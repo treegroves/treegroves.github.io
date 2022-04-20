@@ -160,12 +160,21 @@ nav{
     }
 
     .archive-v{
+      margin-top: 5vw;
       margin-bottom: 10vw;
     }
     .archive-v button{
-      width:50vw;
-
+      width:45vw;
     }
+
+    footer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  
+
 @media screen and (max-width: 1000px) {
       main{
         display: flex;
@@ -239,6 +248,10 @@ nav{
        width:30vw;
        height: 11vw;
      }
+
+     #side-archive-btn {
+      display: none;
+    }
      }
  @media screen and (max-width: 700px) {
       header{
@@ -266,6 +279,7 @@ nav{
           display:none ;
         }
         
+       
        
     }
 
@@ -299,9 +313,9 @@ nav{
 
     }
 
-    @media screen and (min-width: 701px){
+    /* @media screen and (min-width: 701px){
       .archive-v{
       display: none;
      }
-    } 
+    }  */
 

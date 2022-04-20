@@ -159,12 +159,25 @@ nav{
     font-size: 1.5vw;
     }
 
-    .archive-v{
-      margin-top: 5vw;
-      margin-bottom: 10vw;
-    }
+   
     .archive-v button{
       width:45vw;
+      background-color: var(--main-page-color, #19181A);
+      border: solid var(--article-heading-color, #DF9A10);
+    }
+    button.pointer{
+     cursor: pointer;
+    }
+   
+
+    .archive-v button:hover{
+      width:45vw;
+      background-color: var(--main-page-color, #19181A);
+      border: solid var(--article-main-text-color, #7F7F7F);
+      
+    }
+    .archive-v h2:hover{
+      color: var(--article-main-text-color, #7F7F7F);
     }
 
     footer{

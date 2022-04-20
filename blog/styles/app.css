@@ -32,6 +32,7 @@ p {
 
 h2 {
  color: var(--article-heading-color, #DF9A10);
+ font-weight: 300;
  text-align: center;
  line-height: 1px;
 }
@@ -119,12 +120,13 @@ nav{
 
 .text-content h1{
   font-size: 2vw;
+  font-weight: 300;
   text-align: center;
   line-height: 1px;
 }
 
 .side-articles{
-  width: 20vw;
+  width: 15vw;
   margin-left: 6vw; 
 }
 
@@ -133,10 +135,16 @@ nav{
 }
 
 .side-articles img{
-  width: 20vw;
-  height: 10vw;
+  width: 15vw;
+  height: 7vw;
 }
 
+.side-article-heading p{
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--article-heading-color, #DF9A10);
+  text-align: center;
+}
 .s-article-container{
   margin-bottom: 2vw;
   

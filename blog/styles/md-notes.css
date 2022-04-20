@@ -1,0 +1,49 @@
+body {
+  --main-page-color: #19181A;
+  --article-heading-color: #DF9A10;
+  --subtext-color: #B19F9E;
+  --article-main-text-color: #B19F9E;
+  --nav-list-color: #B19F9E;
+  --code-color:
+
+  /* font-family: 'Playfair Display', serif; */
+  font-family: 'Josefin Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+  
+  max-width: 50%;
+  margin: auto;
+
+ background-color: var(--main-page-color, #19181A); 
+}
+
+h1, h2, h3{
+  color: var(--article-heading-color, #DF9A10);
+
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
+
+li, p {
+  color: var(--article-main-text-color, #B19F9E);
+  font-size: 1rem;
+}
+
+code {
+color: #ac46a1;
+font-size: 1.2rem;
+}
+
+img {
+  width: 80%;
+}

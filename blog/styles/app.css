@@ -176,9 +176,9 @@ nav{
       border: solid var(--article-main-text-color, #7F7F7F);
       
     }
-    .archive-v h2:hover{
+    /* .archive-v h2:hover{
       color: var(--article-main-text-color, #7F7F7F);
-    }
+    } */
 
     footer{
       display: flex;

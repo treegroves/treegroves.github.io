@@ -4,7 +4,7 @@ body {
   --subtext-color: #B19F9E;
   --article-main-text-color: #B19F9E;
   --nav-list-color: #B19F9E;
-  --code-color:
+  --code-color: #ac46a1;
 
   /* font-family: 'Playfair Display', serif; */
   font-family: 'Josefin Sans', sans-serif;
@@ -40,7 +40,7 @@ li, p {
 }
 
 code {
-color: #ac46a1;
+color: var(--code-color, #ac46a1);
 font-size: 1.2rem;
 }
 

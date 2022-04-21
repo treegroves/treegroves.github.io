@@ -35,12 +35,27 @@ p {
   color: var(--article-main-text-color, #7F7F7F);
 }
 
+h1{
+  color: var(--article-heading-color, #DF9A10);
+  font-size: 3em;
+}
+
 h2 {
  color: var(--article-heading-color, #DF9A10);
  font-weight: 300;
  text-align: center;
  line-height: 1px;
 }
+.cheat-sheet-section h2 {
+  color: var(--article-heading-color, #DF9A10);
+ font-weight: 800;
+ text-align: left;
+ line-height: 1px;
+ font-size: 2rem;
+ margin-top: 3vw;
+}
+
+
 h3{
   font-size: 1.5em;
   color: var(--subtext-color, #7F7F7F);
@@ -80,7 +95,15 @@ code{
   font-size: 3rem;
   color: var(--article-heading-color, #DF9A10);
 }
+.logo a{
+  text-decoration: none;
+  color: var(--article-heading-color, #DF9A10);
+}
 
+.logo a:hover{
+  color: var(--nav-list-color, #B19F9E);
+
+}
 .latest-article{
   display: flex;
   justify-content: center;
@@ -141,7 +164,7 @@ code{
    display: flex;
    flex-direction: column;
   margin-top: 3vw;
-  margin-bottom: 5vw;
+  margin-bottom: 3vw;
 } 
 
 .blog-post-section img{
@@ -153,6 +176,7 @@ code{
 
 .blog-post-section h2{
   font-weight: 500;
+  font-size: 2rem;
 }
 .blog-post-section a{
   color: var(--article-heading-color, #DF9A10)

@@ -4,211 +4,280 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/blog/styles/md-notes.css">
-  <title>Git Cheat Sheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/styles/app.css">
+  <title>TG Blog</title>
 </head>
 <body>
+  <header>
+    <h1 class="logo"><a href="../../index.html">TG#</a></h1>
+    <nav>
+    <div id="about" class="nav-list"><a href="#">about</a></div>
+    <div id="contacts" class="nav-list"><a href="#">contact</a></div>
+      <!-- <div id="archive" class="nav-list"><a href="#">archive</a> -->
+    </div>
+  </nav>
+  </header>
+
+  <main>
+    <section class="latest-article">
+      <div id="css-positions">
+        <div class="latest-article-img"><img src="/blog/assets/images/praveen-thirumurugan-KPAQpJYzH0Y-unsplash.jpg" alt="picture of a hand pointing at a backlit city map"></div>
   
+        <div class="text-content">
+        <h1>Git Cheat Sheet</h1>
+        <h3>A summary of my Git learnings, makes a handy cheat sheet.</h3>
+    <div class="blog-post-section">
+      <section class="cheat-sheet-section">
+        <h2>Git Setup</h2>
+        <ol>
+        <li>Create directory <code>mkdir</code></li>
+        <li><code>git init</code> creates a local repository. It is done in an existing directory</li>
+        <li><code>$ git clone https://github.com/&lt;directory&gt;</code> to clone a repository into the directory</li>
+        <li><code>git add</code></li>
+        <li><code>git commit</code></li>
+        <li><code>git push</code></li>
+        </ol>
+        
+        <p><code>git log</code> Is used to display commits.
+          It includes:</p>
+        <ul>
+        <li>the SHA: a unique identifier for each commit (first 6-8 characters enough to search for specific one)</li>
+        <li>the author</li>
+        <li>the date</li>
+        <li>the commit message</li>
+        </ul>
+        
+        
+        <p><code>git log --oneline</code>
+        cuts down SHA to 7 characters and only shows commit message</p>
+        <p><code>git log --stat</code>
+        displays additional information:</p>
+        
+        <ul>
+        <li>which files were modified</li>
+        <li>how many files were modified</li>
+        <li>how many lines added</li>
+        <li>how many lines deleted</li>
+        </ul>
+        
+        
+        <p><code>git log -p</code> (same as <code>--patch</code> flag)
+        Shows information specific to what changes were made, you can see the following:</p>
+        
+        <ul>
+        <li>file that was changed</li>
+        <li>versions of the file <code>a/</code> <code>b/</code> etc.</li>
+        <li>which lines were changed <code>@@ -40,6</code> - start line, how many lines were changed.</li>
+        <li>actual changes to the code are shown (green for added, red for removed)</li>
+        </ul>
+        
+        
+        <p><code>-w</code>
+        Ignores whitespace changes.</p>
+        <p><code>git show</code> Is used to search by a specific SHA</p>
+        
+        <h2>Adding Commits to Repo</h2>
+        
+        <p><code>git add</code>
+        used to move files into the staging index</p>
+        <p><code>git add index.html app.css js/app.js</code> to move multiple items</p>
+        <p><code>git add .</code> to move all files in current directory into staging index</p>
+        <p><code>git commit</code> adds files to repository from staging index:</p>
+        
+        
+        <p>prompts editor to open requesting a commit message</p>
+        
+        <p>enter, save and close editor.</p>
+        
+        <p>Result:</p>
+        <code>─tim@LAPTOP-7RMVA9J2 ~/udacity-git-course/new-git-project ‹master●›<br>
+        ╰─$ git commit<br>
+        [master (root-commit) 4f78fd3] Initial commit<br>
+        3 files changed, 14 insertions(+)<br>
+        create mode 100644 css/app.css<br>
+        create mode 100644 index.html<br>
+        create mode 100644 js/app.js<br></code>
+        
+        <p>Editor can be skipped with <code>git commit -m &quot;Initial commit&quot;</code></p>
+        
+        
+        <p><code>git diff</code>
+        shows changes that have been made but haven't been committed.</p>
+        
+        <h2>Git ignore</h2>
+        <p><code>git ignore</code>
+        create <code>.gitignore</code> file and add files you want ignored into it.</p>
+        
+        <p><em>Globbing</em> you can add patterns/characters to <code>.gitignore</code> to avoid listing each file individually.
+        Options:</p>
+        <pre><code>blank lines can be used for spacing
+        # - marks line as a comment
+        * - matches 0 or more characters
+        ? - matches 1 character
+        [abc] - matches a, b, _or_ c
+        ** - matches nested directories - a/**/z matches
+            a/z
+            a/b/z
+            a/b/c/z
+        </code></pre>
+        <p><code>samples/*.jpg</code> for example.</p>
+        
+        
+        <h2>Commit rules</h2>
+        <ul>
+        <li>Each commit should record a single change(add a new image to sidebar, change header, add a carousel etc.)
+        </li>
+        <li>Keep messages short and explain what the commit does, not how.
+        </li>
+        <li>You shouldn't need to use the word 'and' as the commit should be singular.
+        </li>
+        <li>Use the template &quot;This commit will...&quot; except, only type the sentences end.
+        </li>
+        <li>Be consistent
+        </li>
+        </ul>
+        
+        <p>If you need to add a description of why you made a commit do it in the Editor, 2 lines down from commit message.</p>
+        <p>Also, describe changes in imperative:</p>
+        <p><code>Describe your changes in imperative mood, e.g. &quot;make xyzzy do frotz&quot; instead of &quot;[This patch] makes xyzzy do frotz&quot; or &quot;[I] changed xyzzy to do frotz&quot; as if you are giving orders to the codebase to change its behaviour. Try to make sure your explanation can be understood without external resources. Instead of providing a URL to a mailing list archive, summarize the relevant points of the discussion.
+                - git.kernel.org
+        </code></p>
+        
+        <h2>Navigating</h2>
+        <p>Navigating The Log</p>
+        <p>If you're not used to a pager on the command line, navigating in Less can be a bit odd. Here are some helpful keys:</p>
+        <pre><code>to scroll down, press
+            j or ↓ to move down one line at a time
+            d to move by half the page screen
+            f to move by a whole page screen
+        to scroll up, press
+            k or ↑ to move _up_ one line at a time
+            u to move by half the page screen
+            b to move by a whole page screen
+        press q to quit out of the log (returns to the regular command prompt)
+        </code></pre>
+        
+        <h2>Branch, Pull, Merge</h2>
+        
+        <ul>
+        <li><code>git branch &lt;name&gt;</code> to create a new branch </li>
+        <li><code>git checkout &lt;branch name&gt;</code> to switch to branch.</li>
+        <li><code>git merge &lt;branch name&gt;</code> merges branch with current branch.</li>
+        <li><code>git branch -d &lt;branch name&gt;</code> to delete branches that aren't needed.</li>
+        <li><code>git checkout -b admin</code> Creates a branch <em>and</em> checks it out.</li>
+        
+        <p>When merging the Editor can come up asking if you want to change the merge message. Once you have changed it type <code>:wq</code> (write + quit)</p>
+        
+        <h2>make push request</h2>
+        <p>when you want to add you branch to the main, you typically need someone to check it for you and merge. To set this up you need to make a <strong><em>pull request</em></strong>:</p>
+        <ol>
+        <li>Push your branch up <code>git push origin your-name</code></li>
+        <li>Create pull request by clicking <code>new pull request</code></li>
+        <li>Share link <code>https://github.com/dev-academy-foundations/ko-wai-koe/pull/830</code></li>
+        <li>Colleague merges pull request after checking it and delete branch.</li>
+        <li>Check out main branch and pull down changes <code>git pull</code></li>
+        </ol>
+        
+        <!-- <h2>Git merge conflicts</h2>
+        <p>git will insert &quot;Head Markers&quot; into the document to highlight the conflicting changes.
+        Delete what you don't want, save and push it back up.</p> -->
+        <h2>Fork and clone</h2>
+        <ol>
+        <li>Go to repository click <code>fork</code></li>
+        <li>clone repository <code>git clone &lt;repo https&gt;</code></li>
+        <li>configure Git to pull changes from original <em>upsteam</em> repo into your local clone:</li>
+        </ol>
+        
+        <ul>
+        <li>
+        go to directory
+        </li>
+        <li>
+        <code>git remote -v</code> shows current remote repository for your fork: </li>
+        
+        <code>origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)<br>
+        origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)</code>
+        </li>
+        
+        <li>
+        <code>git remote upstream &lt;https&gt;</code> to change remote repository </li>
+        
+        <li> git remote -v</li>
+        <code>    origin  https://github.com/treegroves/Spoon-Knife.git (fetch)<br>
+        origin  https://github.com/treegroves/Spoon-Knife.git (push)<br>
+        upstream https://github.com/treegroves/Spoon-Knife.git (fetch)<br>
+        upstream https://github.com/treegroves/Spoon-Knife.git (push)<br>
+        </code>
+        </ul>
+        
+        <ol>
+        <li>Make changes, <code>add</code>, <code>commit</code> and <code>push</code>
+        </li>
+        <li>Go to your copy of the repo, you will see something like:
+        <code>This branch is 1 commit ahead of octocat/Spoon-Knife:main.</code>
+        To the right click <code>contribute</code> then <code>open pull request</code>
+        </li>
+        <li>click <code>create pull request</code> and add a title and comment about the commit
+        </li>
+        <li>click <code>Create pull request</code>
+        </li>
+        <li>pull request page comes up copy and share url e.g.
+        <code>https://github.com/octocat/Spoon-Knife/pull/26747</code>
+        <p>Example of final window.</p>
+        <img src="/blog/assets/images/2022-04-13-15-28-10.png" alt="Screenshot of a pull request screen on Github">
+        </li>
+        </ol>
+        </section>
 
-<h1>Git Cheat Sheet</h2>
-<h3>Git Setup</h3>
-<ol>
-<li>Create directory <code>mkdir</code></li>
-<li><code>git init</code> creates a local repository. It is done in an existing directory</li>
-<li><code>$ git clone https://github.com/&lt;directory&gt;</code> to clone a repository into the directory</li>
-<li><code>git add</code></li>
-<li><code>git commit</code></li>
-<li><code>git push</code></li>
-</ol>
-<p><code>git log</code> Is used to display commits.
-  It includes:</p>
-<ul>
-<li>the SHA: a unique identifier for each commit (first 6-8 characters enough to search for specific one)</li>
-<li>the author</li>
-<li>the date</li>
-<li>the commit message</li>
-</ul>
-<p><img src="2022-04-12-10-12-54.png" alt=""></p>
-<p><code>git log --oneline</code>
-cuts down SHA to 7 characters and only shows commit message</p>
-<p><img src="2022-04-12-10q-11-59.png" alt=""></p>
-<p><code>git log --stat</code>
-displays additional information:</p>
-<ul>
-<li>which files were modified</li>
-<li>how many files were modified</li>
-<li>how many lines added</li>
-<li>how many lines deleted</li>
-</ul>
-<p><img src="2022-04-12-10-29-44.png" alt=""></p>
-<p><code>git log -p</code> (same as <code>--patch</code> flag)
-Shows information specific to what changes were made, you can see the following:</p>
-<ul>
-<li>file that was changed</li>
-<li>versions of the file <code>a/</code> <code>b/</code> etc.</li>
-<li>which lines were changed <code>@@ -40,6</code> - start line, how many lines were changed.</li>
-<li>actual changes to the code are shown (green for added, red for removed)</li>
-</ul>
-<p><img src="2022-04-12-10-41-34.png" alt=""></p>
-<p><code>-w</code>
-Ignores whitespace changes.</p>
-<p><code>git show</code> Is used to search by a specific SHA</p>
-<h3>Adding Commits to Repo</h3>
-<p><code>git add</code>
-used to move files into the staging index</p>
-<p><code>git add index.html app.css js/app.js</code> to move multiple items</p>
-<p><code>git add .</code> to move all files in current directory into staging index</p>
-<p><code>git commit</code> adds files to repository from staging index:</p>
-<ul>
-<li>
-<p>prompts editor to open requesting a commit message</p>
-<ul>
-<li>
-<p>enter, save and close editor.</p>
-<ul>
-<li>
-<p>Result:</p>
-<p>─tim@LAPTOP-7RMVA9J2 ~/udacity-git-course/new-git-project ‹master●›<br>
-╰─$ git commit<br>
-[master (root-commit) 4f78fd3] Initial commit<br>
-3 files changed, 14 insertions(+)<br>
-create mode 100644 css/app.css<br>
-create mode 100644 index.html<br>
-create mode 100644 js/app.js<br></p>
-</li>
-<li>
-<p>Editor can be skipped with <code>git commit -m &quot;Initial commit&quot;</code></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+    </div>
 
-<p><code>git diff</code>
-shows changes that have been made but haven't been committed.</p>
-<h3>Git ignore</h3>
-<p><code>git ignore</code>
-create <code>.gitignore</code> file and add files you want ignored into it.</p>
-<p><em>Globbing</em> you can add patterns/characters to <code>.gitignore</code> to avoid listing each file individually.
-Options:</p>
-<pre><code>blank lines can be used for spacing
-# - marks line as a comment
-* - matches 0 or more characters
-? - matches 1 character
-[abc] - matches a, b, _or_ c
-** - matches nested directories - a/**/z matches
-    a/z
-    a/b/z
-    a/b/c/z
-</code></pre>
-<p><code>samples/*.jpg</code> for example.</p>
-<p><img src="2022-04-12-14-12-37.png" alt=""></p>
-<h3>Commit rules</h3>
-<ul>
-<li>
-<p><em>Each commit should record a single change</em> (add a new image to sidebar, change header, add a carousel etc.)</p>
-</li>
-<li>
-<p><em>Keep messages short and explain what the commit does, not how.</em></p>
-</li>
-<li>
-<p><em>You shouldn't need to use the word 'and' as the commit should be singular.</em></p>
-</li>
-<li>
-<p><em>Use the template &quot;This commit will...&quot; except, only type the sentences end.</em></p>
-</li>
-<li>
-<p><em>Be consistent</em></p>
-</li>
-</ul>
-<p>If you need to add a description of why you made a commit do it in the Editor, 2 lines down from commit message.</p>
-<p>Also, describe changes in imperative:</p>
-<p><code>Describe your changes in imperative mood, e.g. &quot;make xyzzy do frotz&quot; instead of &quot;[This patch] makes xyzzy do frotz&quot; or &quot;[I] changed xyzzy to do frotz&quot; as if you are giving orders to the codebase to change its behaviour. Try to make sure your explanation can be understood without external resources. Instead of providing a URL to a mailing list archive, summarize the relevant points of the discussion.
-        - git.kernel.org
-</code></p>
-<h3>Navigating</h3>
-<p>Navigating The Log</p>
-<p>If you're not used to a pager on the command line, navigating in Less can be a bit odd. Here are some helpful keys:</p>
-<pre><code>to scroll down, press
-    j or ↓ to move down one line at a time
-    d to move by half the page screen
-    f to move by a whole page screen
-to scroll up, press
-    k or ↑ to move _up_ one line at a time
-    u to move by half the page screen
-    b to move by a whole page screen
-press q to quit out of the log (returns to the regular command prompt)
-</code></pre>
-<h2>Branch, Pull, Merge</h2>
-<p><code>git branch &lt;name&gt;</code> to create a new branch
-<code>git checkout &lt;branch name&gt;</code> to switch to branch
-<code>git merge &lt;branch name&gt;</code> merges branch with current branch.
-<code>git branch -d &lt;branch name&gt;</code> to delete branches that aren't needed.</p>
-<p><code>git checkout -b admin</code> Creates a branch <em>and</em> checks it out.</p>
-<p>When merging the Editor can come up asking if you want to change the merge message. Once you have changed it type <code>:wq</code> (write + quit)</p>
-<h3>make push request</h3>
-<p>when you want to add you branch to the main, you typically need someone to check it for you and merge. To set this up you need to make a <strong><em>pull request</em></strong>:</p>
-<ol>
-<li>Push your branch up <code>git push origin your-name</code></li>
-<li>Create pull request by clicking <code>new pull request</code></li>
-<li>Share link <code>https://github.com/dev-academy-foundations/ko-wai-koe/pull/830</code></li>
-<li>Colleague merges pull request after checking it and delete branch.</li>
-<li>Check out main branch and pull down changes <code>git pull</code></li>
-</ol>
-<h2>Git merge conflicts</h2>
-<p>git will insert &quot;Head Markers&quot; into the document to highlight the conflicting changes.
-Delete what you don't want, save and push it back up.</p>
-<h2>Fork and clone</h2>
-<ol>
-<li>Go to repository click <code>fork</code></li>
-<li>clone repository <code>git clone &lt;repo https&gt;</code></li>
-<li>configure Git to pull changes from original <em>upsteam</em> repo into your local clone:</li>
-</ol>
-<ul>
-<li>
-<p>go to directory</p>
-</li>
-<li>
-<p><code>git remote -v</code> shows current remote repository for your fork</p>
-<blockquote>
-<p>origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)</p>
-</blockquote>
-</li>
-<li>
-<p><code>git remote upstream &lt;https&gt;</code> to change remote repository</p>
-<blockquote>
-<p>git remote -v</p>
-</blockquote>
-<pre><code>    origin  https://github.com/treegroves/Spoon-Knife.git (fetch)
-    origin  https://github.com/treegroves/Spoon-Knife.git (push)
-    upstream https://github.com/treegroves/Spoon-Knife.git (fetch)
-    upstream https://github.com/treegroves/Spoon-Knife.git (push)
-</code></pre>
-</li>
-</ul>
-<ol start="4">
-<li>
-<p>Make changes, <code>add</code>, <code>commit</code> and <code>push</code></p>
-</li>
-<li>
-<p>Go to your copy of the repo, you will see something like:
-<code>This branch is 1 commit ahead of octocat/Spoon-Knife:main.</code>
-To the right click <code>contribute</code> then <code>open pull request</code></p>
-</li>
-<li>
-<p>click <code>create pull request</code> and add a title and comment about the commit</p>
-</li>
-<li>
-<p>click <code>Create pull request</code></p>
-</li>
-<li>
-<p>pull request page comes up copy and share url e.g.
-<code>https://github.com/octocat/Spoon-Knife/pull/26747</code></p>
-<p>Example of final window.</p>
-<img src="/blog/assets/images/2022-04-13-15-28-10.png" alt="Screenshot of a pull request screen on Github">
-</li>
-</ol>
+    
+
+    
+  </section>
+
+  <section class="side-articles">
+    <div class="side-article-heading">
+      <p> Recommended </p>
+    </div>
+
+    <a href="/blog/posts/git-notes.html">
+      <div class="s-article-container" id="other-article-1">
+        <div class="s-article-img"><img src="/blog/assets/images/praveen-thirumurugan-KPAQpJYzH0Y-unsplash.jpg" alt=""></div>
+        <h2>Git Cheat Sheet</h2>
+        <p>A summary of my Git learnings, makes a handy cheat sheet.</p>
+      </div>
+    </a>
+
+    <a href="/blog/posts/CSS-Position.html">
+      <div class="s-article-container" id="other-article-1">
+        <div class="s-article-img"><img src="/blog/assets/images/jose-martin-ramirez-carrasco-yhNVwsKTSaI-unsplash.jpg" alt=""></div>
+        <h2>CSS - Position</h2>
+        <p>What is the difference between Relative, Absolute and Fixed Positions?</p>
+      </div>
+    </a>
+
+
+<a href="#">
+  <div class="s-article-container" id="side-archive-btn">
+    <!-- <div class="s-article-img"><img src="/blog/assets/images/jeshoots-com-pUAM5hPaCRI-unsplash.jpg" alt=""></div> -->
+    <h2>...view archive</h2>
+  </div>
+
+  </section>
+</main>
+  <footer>
+     <a href="#"> <div class="archive-v">
+        <button class="pointer"><h2>view archive</h2></button>
+      </div></a>
+  </footer>
+      
+ 
 </body>
 </html>

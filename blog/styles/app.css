@@ -77,6 +77,8 @@ nav{
   margin-top: 2vw;
   width: 10vw;
   margin-right: 2vw;
+  font-weight: 100;
+  font-size: 1.4em;
 }
 
 header{
@@ -93,6 +95,7 @@ code{
 
 .logo {
   font-size: 3rem;
+  font-weight: 200;
   color: var(--article-heading-color, #DF9A10);
 }
 .logo a{

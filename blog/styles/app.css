@@ -5,6 +5,12 @@ body {
   --article-main-text-color: #B19F9E;
   --nav-list-color: #B19F9E;
 
+  /* --main-page-color: white;
+  --article-heading-color: black;
+  --subtext-color: black;
+  --article-main-text-color: black;
+  --nav-list-color: black; */
+
   /* font-family: 'Playfair Display', serif; */
   font-family: 'Josefin Sans', sans-serif;
 font-family: 'Roboto', sans-serif;
@@ -93,10 +99,18 @@ code{
   font-size: 1.2em;
 }
 
+#id-v-s b{
+  color: var(--article-heading-color, #DF9A10);
+}
+
+#side-archive-btn{
+  margin-top: 5vw;
+}
+
 .logo {
   font-size: 3rem;
   font-weight: 200;
-  color: var(--article-heading-color, #DF9A10);
+  
 }
 .logo a{
   text-decoration: none;

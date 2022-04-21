@@ -137,7 +137,7 @@ code{
 }
 .continue{
   text-align: right;
-  padding-bottom: 8vw;
+  padding-bottom: 3vw;
 }
 .continue a{
   color: var(--article-heading-color, #DF9A10);

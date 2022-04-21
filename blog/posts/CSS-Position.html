@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/styles/app.css">
+  <title>CSS Positions</title>
+</head>
+<body>
+  <header>
+    <h1 class="logo">TG#</h1>
+    <nav>
+    <div id="about" class="nav-list"><a href="#">about</a></div>
+    <div id="contacts" class="nav-list"><a href="#">contact</a></div>
+      <!-- <div id="archive" class="nav-list"><a href="#">archive</a> -->
+    </div>
+  </nav>
+  </header>
+
+  <main>
+    <section class="latest-article">
+    <div id="css-positions">
+      <div class="latest-article-img"><img src="/blog/assets/images/jose-martin-ramirez-carrasco-yhNVwsKTSaI-unsplash.jpg" alt="picture of a hand pointing at a backlit city map"></div>
+
+      <div class="text-content">
+      <h1>CSS Positions</h1>
+      <h3>What is the difference between Relative, Absolute and Fixed Positions</h3>
+  <div class="blog-post-section">
+   <h2>Position: relative;</h2>
+
+    <img src="/blog/assets/images/pos-rel-code.png" alt="">
+
+
+  <h4><code>position: relative;</code> allows an element to be moved <em>relative to itself</em>.
+  </h4> 
+
+<p> This means that the element can only be moved from its default starting position.<br>
+<p>When you add <code>top</code>, <code>bottom</code>, <code>left</code> or <code>right</code> values, they push the element away from it's original position. Meaning left moves the element to the right and so on. You can see this demonstrated in the embedded CodePen below.</p>
+
+<h4>Some of the things you will be able to spot are:</h4>
+<ul>
+  <li>The element can be moved up, down, left or right relative to it's original place.</li>
+  <li>Does not offset or move other static elements, rather it is imposed over them, creating a stacking effect.</li>
+</ul>
+    <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="XWVGjvz" data-user="timcode21" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href="https://codepen.io/timcode21/pen/XWVGjvz">
+      position: relative;</a> by Tim (<a href="https://codepen.io/timcode21">@timcode21</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+    </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+    <h4>Two other important features of <code>position: relative;</code> are:</h4>
+<ol>
+  <li> By default <code>position: relative;</code> elements overlay ordinary static elements. This also means that <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">z-index</a> can be used on relative elements, to change their <em>depth</em> in the document.</li>
+  <li>Elements within the Relative element can be Absolutely set.</li>
+</ol>
+  </div>
+
+  <div class="blog-post-section">
+    <h2>Position: absolute;</h2>
+ 
+     <img src="/blog/assets/images/pos-abs-code.png" alt="">
+ 
+ 
+   <h4><code>position: absolute;</code>
+   </h4> 
+ 
+ <p> An element with <code>position: absolute;</code> is removed from the normal flow of a document, and effectively placed on a different level to other elements. This means that it has no place it belongs, other than relative to it's closest positioned ancestor element (if it even has one).
+  
+<p> Before you start feeling sorry for absolute elements, you should know that they can be moved anywhere in the document and overlay any other element.</p>
+
+ <p>It must be noted here that with great power comes great responsibility. While being removed from the flow of the document, and the influence of other elements, has it's upsides, it also has one draw back; it can introduce a level of inflexibility. Having absolute elements sprinkled all over the place can make responsive design a lot more complicated</p>
+
+ <p>Finally, like <code>position: relative;</code> a <code>position: absolute;</code>element can be manipulated with <code>top</code>, <code>bottom</code>, <code>left</code> and <code>right</code> values.</p>
+ 
+ <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="ExoMWxg" data-user="timcode21" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/timcode21/pen/ExoMWxg">
+  position: absolute;</a> by Tim (<a href="https://codepen.io/timcode21">@timcode21</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+<div class="blog-post-section">
+  <h2>Position: fixed;</h2>
+
+   <img src="/blog/assets/images/pos-fix-code.png" alt="">
+
+
+ <h4><code>position: fixed;</code>
+ </h4> 
+
+<p>
+  Similarly to <code>position: absolute;</code>, <code>position: fixed;</code> elements are removed from the flow of the document. They can also be manipulated with the <code>top</code>, <code>bottom</code>, <code>left</code> and <code>right</code> values.</p></p>
+
+<p>
+  The main points of difference are that:
+</p>
+<ol>
+<li>The element's position is relative to the viewport (browser window).</li> 
+<li>The element is fixed in place, so when the the page is scrolled, it will retain its position</li>
+</ol>  
+<p>Examples of a <code>position: fixed;</code>element are scrollbars and navigation bars on webpages that follow the user as they scroll.</p>
+<P>click and drag the scrollbars on the CodePen below to see a <code>position: fixed;</code>element at work:</P>
+
+
+
+<p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="ZEvPerp" data-user="timcode21" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/timcode21/pen/ZEvPerp">
+  Untitled</a> by Tim (<a href="https://codepen.io/timcode21">@timcode21</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="side-articles">
+  <div class="side-article-heading">
+    <p> Recommended </p>
+  </div>
+
+  <a href="/blog/posts/git-notes.html">
+    <div class="s-article-container" id="other-article-1">
+      <div class="s-article-img"><img src="/blog/assets/images/praveen-thirumurugan-KPAQpJYzH0Y-unsplash.jpg" alt=""></div>
+      <h2>Git Cheat Sheet</h2>
+      <p>A summary of my Git learnings, makes a handy cheat sheet.</p>
+    </div>
+  </a>
+
+  <a href="#">
+    <div class="s-article-container" id="side-archive-btn">
+      <!-- <div class="s-article-img"><img src="/blog/assets/images/jeshoots-com-pUAM5hPaCRI-unsplash.jpg" alt=""></div> -->
+      <h2>...view archive</h2>
+    </div>
+  
+    </section>
+   
+</main>
+<footer>
+   <a href="#"> <div class="archive-v">
+      <button class="pointer"><h2>view archive</h2></button>
+    </div></a>
+</footer>
+    
+</body>
+</html>

@@ -55,6 +55,14 @@ h4{
 }
 
 
+nav{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2vw;
+  width: 10vw;
+  margin-right: 2vw;
+}
 
 header{
 display: flex;
@@ -67,10 +75,6 @@ code{
   color: var(--code-color, #ac46a1);
   font-size: 1.2em;
 }
-
-
-
-
 
 .logo {
   font-size: 3rem;
@@ -94,19 +98,9 @@ code{
   font-size: 2rem;
 }
 
-nav{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin-top: 2vw;
-  width: 10vw;
-  margin-right: 2vw;
-}
-
 .nav-list {
   padding-top: 1vw;
   padding-left: 0.5vw;
-
 }
 
 .nav-list a{
@@ -114,9 +108,9 @@ nav{
   /* color: var(--nav-list-color, #B19F9E); */
   color: var(--article-heading-color, #DF9A10);
 }
+
 .nav-list a:hover {
   color: var(--nav-list-color, #B19F9E);
- 
 }
 .continue{
   text-align: right;
@@ -189,7 +183,6 @@ nav{
 }
 .s-article-container{
   margin-bottom: 2vw;
-  
   }
   
 .s-article-container:hover{
@@ -200,17 +193,22 @@ nav{
     margin-bottom: 2vw;
     font-size: 1.5vw;
     }
-    .archive-v button{
-      width:45vw;
-      background-color: var(--main-page-color, #19181A);
-      border: solid var(--article-heading-color, #DF9A10);
+
+.archive-v {
+  margin-bottom: 5vw;
+}
+
+.archive-v button{
+    width:45vw;
+    background-color: var(--main-page-color, #19181A);
+    border: solid var(--article-heading-color, #DF9A10);
     }
-    button.pointer{
+
+  button.pointer{
      cursor: pointer;
     }
-   
-
-    .archive-v button:hover{
+  
+ .archive-v button:hover{
       width:45vw;
       background-color: var(--main-page-color, #19181A);
       border: solid var(--article-main-text-color, #7F7F7F);

@@ -383,7 +383,7 @@ code{
 
     .latest-article h1{
       color: var(--article-heading-color, #DF9A10);
-      font-size: 5vw;
+      font-size: 4vw;
     }
 
     }

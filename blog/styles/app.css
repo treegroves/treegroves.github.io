@@ -271,8 +271,34 @@ code{
       justify-content: center;
     }
 
-  
 
+    /* Styling for archive page */
+  .archive-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    
+  }
+  .archive-container a{
+    text-decoration: none;
+  }
+  .archive-container a:hover{
+   opacity: 80%;
+  }
+  .arch-article-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;  
+    margin: 2vw;
+  }
+  
+  .arch-article-container img{
+    width: 20vw;
+  }
+    /* Styling for archive page ^^*/
 @media screen and (max-width: 1000px) {
       main{
         display: flex;
@@ -321,7 +347,28 @@ code{
         .side-articles{
           display: none;}
     
+          .archive-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+          }
+          .archive-container h2, p {
+            font-size: 3vw;
+          }
+          .arch-article-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30vw;  
+            margin: 2vw;
+          }
+          .arch-article-container img{
+            width: 30vw;
+          }
      }
+
+    
  @media screen and (max-width: 700px) {
       header{
         display: flex;
@@ -355,12 +402,13 @@ code{
         }
         
        
-       
     }
 
 @media screen and (max-width: 620px) {
-      
-
+      .logo{
+        margin-left: 10vw;
+        
+      }
         nav{
           display: flex;
           justify-content: center;
@@ -386,6 +434,25 @@ code{
       font-size: 4vw;
     }
 
+    .archive-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      
+    }
+    .archive-container h2, p {
+      font-size: 3vw;
+    }
+    .arch-article-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90vw;  
+      margin: 2vw;
+    }
+    .arch-article-container img{
+      width: 80vw;
+    }
     }
 
     /* @media screen and (min-width: 701px){

@@ -26,13 +26,15 @@ font-family: 'Roboto', sans-serif;
 
 
 body {
-  max-width: 70%;
+  max-width: 100%;
   margin: auto;
 }
 
 main{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  
   
 }
 
@@ -106,6 +108,9 @@ display: flex;
 justify-content: space-between;
 flex-direction: row;
 margin-bottom: 1.5vw;
+background-color: #7F7F7F;
+
+
 }
 
 code{
@@ -132,8 +137,8 @@ blockquote{
 }
 
 .logo {
-  font-size: 3rem;
-  font-weight: 200;
+  font-size: 2rem;
+  font-weight: 300;
   
 }
 .logo a{
@@ -150,6 +155,7 @@ blockquote{
   justify-content: center;
   flex-direction: column;
   width: 45vw;
+
 }
 
 .latest-article-img {
@@ -184,6 +190,7 @@ blockquote{
   color: var(--nav-list-color, #B19F9E);
 }
 .continue{
+  font-size: 1vw;
   text-align: right;
   padding-bottom: 3vw;
 }
@@ -209,11 +216,15 @@ blockquote{
  .blog-post-section{
    display: flex;
    flex-direction: column;
-  margin-top: 3vw;
+  /* margin-top: 3vw; */
   margin-bottom: 3vw;
   padding: 2vw;
+  border-bottom: solid gainsboro;
   border-radius: 0.25vw;
   background-color: #ffffff;
+  /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(115, 111, 111, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); */
   
 } 
 

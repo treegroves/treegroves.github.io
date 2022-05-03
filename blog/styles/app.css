@@ -91,27 +91,53 @@ h5{
   font-weight: 400;
   text-align: center;
 }
+/* top nav bar */
+header{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-bottom: 1.5vw;
+  background-color: #7F7F7F;
+  }
 
 nav{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
-  margin-top: 2vw;
   width: 10vw;
-  margin-right: 2vw;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.4em;
 }
-
-header{
-display: flex;
-justify-content: space-between;
-flex-direction: row;
-margin-bottom: 1.5vw;
-background-color: #7F7F7F;
-
-
+.nav-list {
+  padding-top: 1.5vw;
+  padding-left: 0.5vw;
 }
+
+.nav-list a{
+  text-decoration: none;
+  /* color: var(--nav-list-color, #B19F9E); */
+  color: var(--article-heading-color, #DF9A10);
+}
+
+.nav-list a:hover {
+  color: var(--nav-list-color, #B19F9E);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 300;
+  
+}
+.logo a{
+  text-decoration: none;
+  color: var(--article-heading-color, #DF9A10);
+}
+
+.logo a:hover{
+  color: var(--nav-list-color, #B19F9E);
+}
+/* ^^^^ top nav bar ^^^^*/
+
 
 code{
   color: var(--code-color, #ac46a1);
@@ -136,26 +162,12 @@ blockquote{
   margin-top: 5vw;
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: 300;
-  
-}
-.logo a{
-  text-decoration: none;
-  color: var(--article-heading-color, #DF9A10);
-}
 
-.logo a:hover{
-  color: var(--nav-list-color, #B19F9E);
-
-}
 .latest-article{
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 45vw;
-
 }
 
 .latest-article-img {
@@ -175,20 +187,7 @@ blockquote{
   font-size: 3rem;
 }
 
-.nav-list {
-  padding-top: 1vw;
-  padding-left: 0.5vw;
-}
 
-.nav-list a{
-  text-decoration: none;
-  /* color: var(--nav-list-color, #B19F9E); */
-  color: var(--article-heading-color, #DF9A10);
-}
-
-.nav-list a:hover {
-  color: var(--nav-list-color, #B19F9E);
-}
 .continue{
   font-size: 1vw;
   text-align: right;
@@ -346,72 +345,62 @@ blockquote{
   }
     /* Styling for archive page ^^*/
 @media screen and (max-width: 1000px) {
-      main{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
+  main{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+  }
 
-      body{
-        max-width: 90%;
-        margin: auto;
-      }
+  body{
+    max-width: 100%;
+    margin: auto;
+  }
 
-      nav{
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        margin-top: 3vw;
-        margin-bottom:3vw;
-        width: 10vw;
-        margin-right:15%;
-      }
+  .latest-article{
+    width:90%;
+  } 
 
-     
-      .latest-article h1{
-        color: var(--article-heading-color, #DF9A10);
-        font-size: 2rem;
-      
-      }
+  .latest-article h1{
+    color: var(--article-heading-color, #DF9A10);
+    font-size: 2rem;
+  }
 
-      .latest-article{
-        width:90%;
-      }
+  .latest-article-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .latest-article img{
-        width: 80vw;
-        height: auto;
-        
-      }
-      
-      .latest-article-img {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+  .latest-article img{
+    width: 80vw;
+    height: auto;
+  }
 
-        .side-articles{
-          display: none;}
-    
-          .archive-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            
-          }
-          .archive-container h2, p {
-            font-size: 2vw;
-          }
-          .arch-article-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 30vw;  
-            margin: 2vw;
-          }
-          .arch-article-container img{
-            width: 30vw;
-          }
+  .side-articles{
+    display: none;}
+
+  .archive-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+
+  .archive-container h2, p {
+    font-size: 2vw;
+  }
+
+  .arch-article-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;  
+    margin: 2vw;
+  }
+
+  .arch-article-container img{
+    width: 30vw;
+  }
      }
 
     

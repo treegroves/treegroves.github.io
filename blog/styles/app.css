@@ -45,7 +45,7 @@ ul, ol{
 li {
   color: var(--article-main-text-color, #7F7F7F);
   padding: 0.5vw 0vw 0.5vw 0vw;
-  font-size: 1.2em;
+  font-size: 1rem;
 }
 p {
   font-size: 1.3rem;
@@ -357,6 +357,10 @@ blockquote{
     margin: auto;
   }
 
+  p {
+    font-size: 1.3rem;
+  }
+
   .latest-article{
     width:90%;
   } 
@@ -386,7 +390,7 @@ blockquote{
     flex-wrap: wrap;
     }
 
-  .archive-container h2, p {
+  .archive-container h2 {
     font-size: 2vw;
   }
 
@@ -421,6 +425,10 @@ blockquote{
           width: 10vw;
           margin-left: 60%;
         }
+
+        p {
+          font-size: 1.3rem;
+        }
         
         .nav-list {
           padding-top: 1vw;
@@ -452,6 +460,13 @@ blockquote{
           width: 10vw;
           margin-left: 40%;
         }
+        p {
+          font-size: 1rem;
+        }
+
+        li {
+          font-size: 1rem;
+        }
 
     #about{
       margin-bottom: 1vw;
@@ -475,7 +490,7 @@ blockquote{
       flex-wrap: wrap;
       
     }
-    .archive-container h2, p {
+    .archive-container h2{
       font-size: 3vw;
     }
     .arch-article-container {

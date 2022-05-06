@@ -147,7 +147,7 @@ code{
 }
 
 blockquote{
-  background-color: var(--main-page-color, #19181A);
+ 
   color: var(--article-main-text-color,);
   padding: 3vw;
   font-size: 1rem ;
@@ -204,7 +204,18 @@ blockquote{
   text-decoration: underline;
 }
 
-
+#neurovideos {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: space-between;
+}
+.embedded-video iframe {
+  margin-top: 3vw;
+  align-items: center;
+  width: 100%;
+  height: 25vw;
+}
 
 .text-content h1{
   font-size: 2.5vw;

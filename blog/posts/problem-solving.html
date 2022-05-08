@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/app.css">
+  <title>Problem Solving</title>
+</head>
+<body>
+  <header>
+    <h1 class="logo"><a href="../../index.html">TG/blog</a></h1>
+    <nav>
+    <div id="about" class="nav-list"><a href="#">about</a></div>
+    <div id="contacts" class="nav-list"><a href="#">contact</a></div>
+      <!-- <div id="archive" class="nav-list"><a href="#">archive</a> -->
+    </div>
+  </nav>
+  </header>
+
+  <main>
+    <section class="latest-article">
+    <div id="css-positions">
+      <div class="text-content">
+      <h1>Problem Solving</h1>
+      <h3>How to get things done</h3>
+      <h5>May 8, 2022 by Tim Greenslade</h5>
+      
+      <div class="latest-article-img"><img src="/blog/assets/images/timothy-dykes-LhqLdDPcSV8-unsplash.jpg" alt="photograph of a rubber ducky"></div>
+
+    <div class="blog-post-section">
+      <h3>A time I got unstuck; using .map() method to capitalize each word:</h3>
+      
+
+        <p>
+          I was stuck on how to select each word within a single string using the <code>.map()</code> method. It made sense initially, all I had to do was run the map method on the string. Make an array with all the elements and capitalise them, simple as that. However, the string was just a single element. I needed a way to make each word an individual string element, so that I could run the map method on each of them. I googled and did some research ("how to split a string into multiple elements"). I discovered the <code>.split()</code> method. MDN says "The <code>.split()</code> method divides a String into an ordered list of substrings" and I knew I'd found the final piece of the puzzle. All I had to do was tell the map function exactly what I wanted it to do; first index in each element `.toUpperCase()` and the indexes after that to <code>.substring</code>.
+        </p>
+
+        <p>
+          I wrote out what I wanted each step in the function to do, took the puzzle pieces, tried various iterations to finally find one that clicked everything into place. This was one of the times I did not ask for help from a facilitator or other students, so I felt a bit lost at times, but I had a sense that I was making progress and in the learning zone, so kept at it.
+          And to be honest, it felt great; a tiny victory is still a victory.
+      </p>
+        
+        <h3>How confident I feel with the following problem-solving techniques and processes:</h3>
+      <p>
+        <b>Pseudocode:</b>
+        </p>
+        <p>
+          Using pseudocode really helps me flesh out the problem and break it into smaller task. It also helps me find the spots where I have a gap in my knowledge. I may know what needs to happen but have no idea how to make it happen. Before thinking things out with pseudocode, I found it hard to locate specific weak points in my understanding.
+        </p>
+        
+        <p>
+          I also find revisionary pseudocode very useful. After I have solved a problem, I break the solution down and more clearly define what is happening at each step.
+        </p>
+        
+        <p>
+          <b>Trying something:</b>
+        </p>
+        
+        <p>
+          I have always used this method in problem solving, and with patience and precision, it can be a powerful tool. Often, I find that I have all the pieces of a puzzle but don't quite know how to put it all together. This is where just trying something, and then trying something else slightly different, can really help me.
+        </p>
+        
+        <p>
+          <b>Rubber ducky method:</b>
+        </p>
+        
+        <p>
+          The Rubber Ducky method is fantastic! There is such power in speaking out loud what you're thinking. It is like pseudocode, except through speaking it to an object (A very friendly Chocobo plushie for me), and committing to making myself understood, I hold yourself to a higher scrutiny. It often results in the realisation that I do not, in fact, have this, and where I am tripping up in my understanding
+        </p>
+        
+        <p>
+          <b>Reading error messages:</b>
+        </p>
+        <p>I still struggle with this one, finding some of the messages a bit intimidating and confusing. I have been putting more effort into slowing down to focus on what the errors are saying. Half the time it points out a tiny thing (a typo, wrong syntax) that is easy to fix. Other times I need to google what it means or ask for a second opinion.</p>
+        
+        <p>
+          <b>Console.logging:</b>
+        </p>
+        <p>When I finally got how this worked, it unlocked a lot for me. The idea of just looking to see what the function is outputting at any given time is very useful. It is particularly useful, when used step by step, line by line, for finding exactly where my solution has gone awry.</p>
+        
+        <p>
+          <b>Googling:</b>
+        </p>
+        
+        <p>
+          I solve so many of my problems in life with a good Google. Coming from a library background, I know that pretty much any question has an answer if you phrase the question correctly. I can't overstate how powerful a search engine of this magnitude is and how useful it is.
+        </p>
+
+        <p>
+          <b>Asking your peers for help:</b>
+        </p>
+        
+        <p>
+          I have done this a few times, but really need to reach out and try this more. When I have done it, it has helped me view problems in different light
+          .</p>
+        
+        <p>
+          <b>Asking coaches for help:</b>
+        </p>
+        <p>I have been improving with this, initially I took on a completionism mindset of needing to solve it all by myself to unlock an achievement. Now I'm not letting myself get bogged down on things that are tripping me up.</p>
+        
+        <p>
+          <b>Improving your process with reflection:</b>
+        </p>
+        <p>Once I have solved a problem, I go back and reflect on how I did it, then I try to break it and try a slightly different solution. I also look around at other solutions and approaches. I take these learnings into my next problem.</p>
+      
+      </div>
+  </div>
+
+</section>
+
+<section class="side-articles">
+  <div class="side-article-heading">
+    <p> Recommended </p>
+  </div>
+
+  <a href="/blog/posts/js-fundamentals.html">
+    <div class="s-article-container" id="other-article-1">
+      <div class="s-article-img"><img src="/blog/assets/images/pankaj-patel-1IW4HQuauSU-unsplash.jpg" alt="photograph of js doc"></div>
+      <h2>JS Fundamentals</h2>
+      <h5>April 30, 2022 by Tim Greenslade</h5>
+    </div>
+  </a>
+
+  <a href="/blog/posts/CSS-Position.html">
+    <div class="s-article-container" id="other-article-1">
+      <div class="s-article-img"><img src="/blog/assets/images/sesha-reddy-kovvuri-Go5qDQJQSU4-unsplash.jpg" alt="photograph of a compass and sextant on a table"></div>
+      <h2>CSS - Position</h2>
+      <p>What is the difference between Relative, Absolute and Fixed Positions?</p>
+      <h5>April 21, 2022 by Tim Greenslade</h5>
+      
+    </div>
+  </a>
+
+  <a href="/blog/posts/git-notes.html">
+    <div class="s-article-container" id="other-article-1">
+      <div class="s-article-img"><img src="/blog/assets/images/praveen-thirumurugan-KPAQpJYzH0Y-unsplash.jpg" alt=""></div>
+      <h2>Git Cheat Sheet</h2>
+      <p>A summary of my Git learnings, makes a handy cheat sheet.</p>
+      <h5>April 20, 2022 by Tim Greenslade</h5>
+    </div>
+  </a>
+
+  <a href="/blog/posts/identity-values-strengths.html">
+    <div class="s-article-container" id="other-article-1">
+      <div class="s-article-img"><img src="/blog/assets/images/20210724_170310.jpg" alt="photograph of me on a wharf"></div>
+      <h2>Self Introduction</h2>
+      <h5>April 22, 2022 by Tim Greenslade</h5>
+    </div>
+  </a>
+
+  <a href="/blog/posts/learning-plan.html">
+    <div class="s-article-container" id="other-article-1">
+      <div class="s-article-img"><img src="/blog/assets/images/glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg" alt="photograph of me checklist in book"></div>
+      <h2>Learning Plan</h2>
+      <h5>April 22, 2022 by Tim Greenslade</h5>
+    </div>
+  </a>
+
+  <a href="/blog/posts/te-houtaewa-template.html">
+    
+    <div class="s-article-container" id="other-article-1">
+      
+      <div class="s-article-img"><img src="/blog/assets/images/swapnil-dwivedi-Xcmfp0gBukI-unsplash.jpg" alt="photograph of person running on beach"></div>
+      <h2>Te Houtaewa</h2>
+      <h5>April 22, 2022 by Tim Greenslade</h5>
+    </div>
+  </a>
+
+
+<a href="/blog/posts/archive.html">
+<div class="s-article-container" id="side-archive-btn">
+ 
+  <h2>...view archive</h2>
+</div>
+
+   
+</main>
+<footer>
+   <a href="../../blog/posts/archive.html"> <div class="archive-v">
+      <button class="pointer"><h2>view archive</h2></button>
+    </div></a>
+</footer>
+    
+</body>
+</html>

@@ -27,12 +27,12 @@ moleInBox()
 //if mole tile is clicked, run moleInBox()
 //and delete img
 moleImg.classList.add('mole')
-moleImg.src = 'mole.PNG'
+moleImg.src = '/blog/assets/images/mole.PNG'
 moleImg.onclick = whackedMole
 
 function whackedMole(e) {
   moleInBox()
-  let audioO = new Audio('whack-audio.wav')
+  let audioO = new Audio('/blog/assets/whack-audio.wav')
   audioO.play()
   counter++
   document.getElementById(

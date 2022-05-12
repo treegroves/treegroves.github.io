@@ -35,10 +35,27 @@ function whackedMole(e) {
   let audioO = new Audio('/blog/assets/whack-audio.wav')
   audioO.play()
   counter++
-  document.getElementById(
-    'counter'
-  ).innerHTML = `You have whacked ${counter} moles!`
+  document.getElementById('counter').innerHTML = ` Moles Whacked: ${counter}`
 }
+
+setTimeout(function () {
+  // alert(`your final score is ${counter}`)
+  if (confirm(`your final score is ${counter}`)) {
+    window.location.reload()
+  }
+}, 11200)
+
+let timeleft = 10
+let downloadTimer = setInterval(function () {
+  if (timeleft < 1) {
+    clearInterval(downloadTimer)
+    document.getElementById('countdown').innerHTML = 'TIMES UP'
+  } else {
+    document.getElementById('countdown').innerHTML =
+      timeleft + ' seconds remaining'
+  }
+  timeleft -= 1
+}, 1000)
 
 // let mole = e.target
 // console.log(`I clicked on ${mole}`)
